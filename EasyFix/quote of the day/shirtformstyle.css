@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: montserrat;
+  background-color: aliceblue;
+}
+.hero {
+  margin-top: 0rem;
+  margin-left: 20rem;
+}
+h1 {
+  width: 100%;
+  text-align: left;
+  color: black;
+  font-size: 2rem;
+  white-space: nowrap;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav a.active,
+nav a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav a:hover,
+  nav a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  flex-basis: 70%;
+}
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+  margin-right: 5px;
+}
+::placeholder {
+  color: #999;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 5px;
+}
+form {
+  margin-top: 0rem;
+  padding: 1rem;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input:focus,
+textarea:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px #66afe9;
+}
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 25rem;
+  margin-left: 12rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="phone-number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+input[type="color"] {
+  width: 70px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  appearance: none;
+}
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 13rem;
+}
+/* footer {
+  background-color: black;
+  color: white;
+
+  width: 100vw;
+  font-size: 16px;
+  position: absolute;
+  top: 130%;
+  z-index: 100;
+}
+footer * {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 3fr 2fr 4fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+fotter h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+fotter ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+fotter li:not(:first-child) {
+  margin-top: 0.8em;
+}
+fotter ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+fotter ul li a:hover {
+  color: #c7940a;
+}
+.about p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+fotter input,
+.subscribebtn {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.subscribebtn {
+  background-color: #c7940a;
+  color: #ffffff;
+}
+div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social i {
+  color: #bac6d9;
+}
+fotter ::placeholder {
+  margin: 20rem;
+} */

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shirtformstyle.css" />
+    <title>FORM</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">QuickFix</label>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../QRcode/qrcode.html">QR Code</a></li>
+        <li><a href="../HowTo/howto.html">How-To</a></li>
+        <li>
+          <a class="active" href="../quote of the day/quote.html"
+            >Quote Of The Day</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1>Enter Details</h1>
+      <form method="POST" class="form-group">
+        <fieldset>
+          <label id="name-label">
+            Name:
+            <input
+              id="name"
+              name="full-name"
+              type="text"
+              required
+              placeholder="Enter your full name"
+          /></label>
+          <hr />
+          <label id="email-label">
+            email (optional):
+            <input
+              id="email"
+              name="full-name"
+              type="email"
+              required
+              placeholder="Enter your email"
+          /></label>
+          <hr />
+          <label id="number-label">
+            Phone Number:
+            <input
+              id="number"
+              name="phone-number"
+              type="phone-number"
+              min="10"
+              max="120"
+              required
+              placeholder="Enter Phone Number"
+              required
+          /></label>
+          <hr />
+          <label id="quote">
+            Enter Quote:
+            <input
+              type="text"
+              name="quote"
+              placeholder="Enter The Quote You Liked"
+            />
+          </label>
+          <hr />
+          <label id="shirtsize">
+            Choose Shirt size:
+            <input type="checkbox" />
+
+            Extra Large
+            <input type="checkbox" />
+
+            Large
+            <input type="checkbox" />
+
+            Medium
+            <input type="checkbox" />
+
+            Small
+            <input type="checkbox" />
+
+            Extra Small
+          </label>
+          <hr />
+          <label for="color-selector"
+            >Select a color:
+            <input type="color" id="color-selector" name="color-selector"
+          /></label>
+
+          OR
+          <input
+            id="color"
+            type="text"
+            name="Color"
+            placeholder="Enter The Color You Liked"
+          />
+          <hr />
+          <label id="number-label">
+            Frequency:
+            <input
+              id="number"
+              name="frequency"
+              type="number"
+              min="1"
+              max="1200"
+              required
+              placeholder="Enter How Much You Want"
+              required
+          /></label>
+        </fieldset>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <!-- <footer>
+      <div class="row primary">
+        <div class="column about">
+          <h3>Connect</h3>
+          <p>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Addis Ababa
+          </p>
+          <div class="social">
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-twitter-square"></i>
+            <i class="fa fa-linkedin-square"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
+        </div>
+
+        <div class="column link">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#team">QR Code generator</a></li>
+            <li><a href="#blogs">How To</a></li>
+            <li><a href="#support">Quote Of The Day</a></li>
+          </ul>
+        </div>
+
+        <div class="column subscribe">
+          <h3>Newsletter</h3>
+          <div>
+            <input type="email" placeholder="Your email id here" />
+            <button class="subscribebtn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+  <script></script>
+</html>

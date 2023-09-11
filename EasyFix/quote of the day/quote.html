@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quote of the day</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">QuickFix</label>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../QRcode/qrcode.html">QR Code</a></li>
+        <li><a href="../HowTo/howto.html">How-To</a></li>
+        <li>
+          <a class="active" href="../quote of the day/quote.html"
+            >Quote Of The Day</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="quote-box">
+      <h2>Quote of the day</h2>
+      <blockquote id="quote">Loading...</blockquote>
+      <span id="author">Loading..</span>
+      <div>
+        <button onclick="  getquote(api_url);">New Quote</button>
+        <button onclick="tweet()">Tweet</button>
+        <a href="shirtform.html"> <button>Order For T-shirt</button></a>
+      </div>
+    </div>
+    <footer>
+      <div class="row primary">
+        <div class="column about">
+          <h3>Connect</h3>
+          <p>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Addis Ababa
+          </p>
+          <div class="social">
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-twitter-square"></i>
+            <i class="fa fa-linkedin-square"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
+        </div>
+
+        <div class="column link">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#team">QR Code generator</a></li>
+            <li><a href="#blogs">How To</a></li>
+            <li><a href="#support">Quote Of The Day</a></li>
+          </ul>
+        </div>
+
+        <div class="column subscribe">
+          <h3>Newsletter</h3>
+          <div>
+            <input type="email" placeholder="Your email id here" />
+            <button class="subscribebtn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const quote = document.getElementById("quote");
+      const author = document.getElementById("author");
+
+      const api_url = "https://api.quotable.io/random";
+      async function getquote(url) {
+        const response = await fetch(url);
+        var data = await response.json();
+        console.log(data);
+        quote.innerHTML = data.content;
+        author.innerHTML = data.author;
+      }
+
+      getquote(api_url);
+
+      function tweet() {
+        window.open(
+          "https://twitter.com/intent/tweet?text=",
+          +quote.innerHTML,
+          "Tweet Window",
+          "width=600",
+          "height=300"
+        );
+      }
+    </script>
+  </body>
+</html>
